@@ -1,0 +1,18 @@
+{
+  "prettier.trailingComma": "all",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+  ],
+  "editor.tabSize": 2,
+  "editor.fontFamily": "'Fira Code', 'YaHei Consolas Hybrid', Menlo, Monaco, 'Courier New', monospace",
+  "prettier.eslintIntegration": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400"
+}
