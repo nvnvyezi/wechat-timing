@@ -37,27 +37,26 @@ module.exports = {
       console.log(`${chalk.blue(getTime(date))}: 来自${chalk.red(fromName.name())}发送给${chalk.green(topic)}的消息: ${chalk.whiteBright(text)}`)
     }
 
-    if (type === types.Unknown) {
-      contact.say('啥东西')
-    }
-    if (type === types.Attachment) {
-      contact.say('啊啊啊')
-    }
-    if (type === types.Audio) {
+    // if (type === types.Unknown) {
+    //   contact.say('啥东西')
+    // }
+    // if (type === types.Attachment) {
+    //   contact.say('啊啊啊')
+    // }
+    // if (type === types.Audio) {
+    // }
+    if (type !== types.Text && selfName !== fromName.name() && !fromSelf) {
+      await contact.say('<img class="qqemoji qqemoji0" text="[微笑]_web" src="/zh_CN/htmledition/v2/images/spacer.gif" />')
+      return
     }
 
     // 文本消息 7
-    if (type === types.Text) {
+    if (type === types.Text && selfName !== fromName.name() && !fromSelf) {
       if (/class="qqemoji/.test(text)) {
-        contact.say('<img class="qqemoji qqemoji27" text="[流汗]_web" src="/zh_CN/htmledition/v2/images/spacer.gif" />')
-      } else {
-        // if (selfName !== fromName.name() && !fromSelf) {
-        //   reply(bot, fromName.name(), text)
-        // }
+        await contact.say('<img class="qqemoji qqemoji0" text="[微笑]_web" src="/zh_CN/htmledition/v2/images/spacer.gif" />')
+        return
       }
+      reply(bot, fromName.name(), text)
     }
-    // if (type === types.Attachment) {
-    console.log(text, type, '|||')
-    // }
   }
 }
