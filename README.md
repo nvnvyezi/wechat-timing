@@ -13,6 +13,18 @@
 - 输出颜色
 - 使用: https://github.com/chalk/chalk
 
+##### superagent
+- 请求
+- https://www.npmjs.com/package/superagent
+
+##### node-schedule
+- 定时任务
+- https://github.com/node-schedule/node-schedule
+
+##### cheerio
+- 爬虫
+- https://github.com/cheeriojs/cheerio#readme
+
 更多功能包括：
 - 消息处理：关键词回复
 - 群管理：自动入群，拉人，踢人
