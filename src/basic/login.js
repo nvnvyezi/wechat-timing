@@ -10,7 +10,8 @@ module.exports = {
     console.log(chalk.green(`欢迎${user.domain}登陆`))
 
     if (timingSwitch) {
-      const contact = await bot.Contact.find({ name: toName })
+      // const contact = await bot.Contact.find({ name: toName })
+      const contact = await bot.Contact.find({ alias: 'test' })
       const rule = new schedule.RecurrenceRule()
 
       rule.dayOfWeek = [0, new schedule.Range(1, 6)]

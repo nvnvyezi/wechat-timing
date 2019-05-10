@@ -15,5 +15,5 @@ bot
   // 当机器人退出登陆的时候，会触发到这个事件。
   .on('logout', onLogout)
   // 当有新消息的时候会触发这个事件。
-  .on('message', onMessage.bind(this, bot))
+  // .on('message', onMessage.bind(this, bot))
   .start()

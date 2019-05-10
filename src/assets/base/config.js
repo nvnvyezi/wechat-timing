@@ -7,7 +7,7 @@ module.exports = {
   // 定时发送开关
   timingSwitch: true,
   // 定时发送开关
-  hour: 8,
-  minute: 0,
+  hour: 19,
+  minute: 2,
   second: 0
 }
